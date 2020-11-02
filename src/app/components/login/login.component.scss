@@ -1,0 +1,116 @@
+
+.login-page {
+  background: blakc;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: #3a3a3c;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 30px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+form {
+  width: 400px;
+}
+
+.box img {
+  height: 38px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.language-select {
+  // margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 35px;
+    padding: 0 5px;
+    margin-bottom: 20px;
+  }
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox input:-webkit-autofill,
+.box .inputBox input:-webkit-autofill:hover,
+.box .inputBox input:-webkit-autofill:focus,
+.box .inputBox input:-webkit-autofill:active,
+.box .inputBox input:-webkit-autofill:first-line {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 14px;
+}
+
+.placeholder {
+  left: 0;
+  position: absolute;
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: white;
+  transition: all .3s ease-out;
+}
+
+.inputBox {
+  input:not(:placeholder-shown) + span {
+    transform: translateY(-60%);
+    font-size: 12px;
+    transition: .3s;
+  }
+  
+  input:placeholder-shown:focus + span {
+    transform: translateY(-60%);
+    font-size: 12px;
+    transition: .3s;
+  }
+
+  input:-webkit-autofill + span {
+    transform: translateY(-60%);
+  }
+
+  &:hover {
+    .placeholder {
+      transform: translateY(-60%);
+      font-size: 12px;
+      transition: all .3s ease-in;
+    }
+  }
+}
+
+.submit-btn {
+  background: black;
+  border-radius: 4px;
+  height: 48px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-family: var(--font-bold);
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+

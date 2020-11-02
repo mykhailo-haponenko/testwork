@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+   box-sizing: border-box;
+}
+.text-one-row {
+   width: 100%;
+   display: inline-block;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button:focus {
+   outline: none;
+   box-shadow: none;
+}
+
+// SHARED STYLES
+.flex {
+   display: flex;
+   &.flex-column {
+       flex-direction: column;
+   }
+   &.flex-row {
+       flex-direction: row !important;
+   }
+   
+   &.justify-start{
+       justify-content: flex-start;
+   }
+   &.justify-center{
+       justify-content: center;
+   }
+   &.justify-end{
+      justify-content: flex-end;
+   }
+   &.justify-between {
+      justify-content: space-between;
+   }
+   &.justify-around {
+      justify-content: space-around;
+   }
+
+
+   &.align-start {
+       align-items: flex-start;
+   }
+   &.align-center {
+       align-items: center;
+   }
+   &.align-end {
+       align-items: flex-end !important;
+   }
+}

@@ -1,0 +1,17 @@
+<div class="login-page">
+    <div class="box">
+      <form [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <div class="inputBox">
+          <input type="email" required value="" formControlName="email" placeholder=" ">
+          <span class="placeholder">Login</span>
+        </div>
+        <div class="inputBox">
+          <input type="password" required value="" formControlName="password" placeholder=" ">
+          <span class="placeholder">Password</span>
+        </div>
+        <button class="submit-btn" style="text-transform: uppercase;" (click)="registration(form.value)">Reg</button>
+        <button type="submit" class="submit-btn" style="text-transform: uppercase;">Login</button>
+        <button type="button" class="submit-btn" (click)="submitLogin();">Login with facebook</button>
+      </form>
+    </div>
+  </div>

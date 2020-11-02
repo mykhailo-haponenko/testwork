@@ -1,0 +1,13 @@
+<header>
+    <div class="nav">
+        <button class="nav-button" [class.active]="router.url === '/list'" mat-stroked-button color="primary"
+            (click)="toggleButton('list')">List</button>
+        <button class="nav-button" [class.active]="router.url === '/map'" mat-stroked-button color="primary"
+            (click)="toggleButton('map')">Map</button>
+    </div>
+    <div class="edit">
+        <input id="search" type="search" placeholder="Search">
+        <button mat-flat-button color="primary" (click)="toggleButton('edit-profile')">Profile</button>
+        <button mat-flat-button color="primary" (click)="logout()">Logout</button>
+    </div>
+</header>

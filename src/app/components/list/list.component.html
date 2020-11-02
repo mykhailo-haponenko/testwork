@@ -1,0 +1,12 @@
+<app-header></app-header>
+<mat-nav-list>
+    <div *ngFor="let user of users | searchUsers:searchText">
+        <div *ngIf="userId != user.id" class="flex user" (click)="openProfile(user.id)">
+        <img [src]="user.image || '../../../assets/not-image.png'" alt="">
+        <div>
+            <div>{{user.firstName}} {{user.lastName}}</div>
+            <div>{{user.country}}, {{user.city}}</div>
+        </div>
+        </div>
+    </div>
+  </mat-nav-list>
